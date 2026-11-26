@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CloudRelay — Broadcast Pre-Recorded Videos Live 24/7</title>
+  <meta name="description" content="Upload a pre-recorded video and stream it live to YouTube, Twitch, Facebook, Kick, or any RTMP destination. Cloud-based 24/7 streaming with no device left on.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="#" aria-label="CloudRelay home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="10" fill="url(#g)"/>
+            <path d="M10 21.5V10.5L15.5 16L10 21.5Z" fill="white"/>
+            <path d="M16.5 21.5V10.5L22 16L16.5 21.5Z" fill="white" fill-opacity="0.7"/>
+            <defs><linearGradient id="g" x1="4" y1="4" x2="28" y2="28"><stop stop-color="#6D5EFc"/><stop offset="1" stop-color="#3BC9DB"/></linearGradient></defs>
+          </svg>
+        </span>
+        <span class="brand-name">Cloud<span>Relay</span></span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#use-cases">Use cases</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-sm btn-primary" href="#get-started">Open Studio</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow">Cloud-based pre-recorded live streaming</p>
+        <h1>Broadcast a pre-recorded video live, <span class="accent">24/7</span>, with no device left on.</h1>
+        <p class="lead">Upload a video file, paste your RTMP URL and stream key, and CloudRelay streams it live to YouTube, Twitch, Facebook, Kick, or any RTMP server. Your channel stays on air from the cloud, even when your computer is off.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#get-started">Upload a video &amp; go live</a>
+          <a class="btn btn-ghost" href="#how-it-works">See how it works</a>
+        </div>
+        <div class="hero-badges" aria-label="Highlights">
+          <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>No device needed</span>
+          <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Cloud-based streaming</span>
+          <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Any RTMP server</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="studio-card">
+          <div class="studio-top">
+            <div class="studio-title">
+              <span class="dot-live"></span>
+              Web Studio
+            </div>
+            <span class="studio-status">Ready</span>
+          </div>
+          <div class="studio-body">
+            <div class="studio-drop">
+              <div class="studio-drop-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 16V4m0 0l-4 4m4-4l4 4"/><path d="M4 18v1a2 2 0 002 2h12a2 2 0 002-2v-1"/></svg>
+              </div>
+              <p class="studio-drop-title">Drop your video here</p>
+              <p class="studio-drop-sub">MP4, MOV, MKV · up to 24 hours</p>
+            </div>
+            <div class="studio-field">
+              <label>Destination</label>
+              <div class="studio-platforms">
+                <span class="platform-chip active">YouTube</span>
+                <span class="platform-chip">Twitch</span>
+                <span class="platform-chip">Facebook</span>
+                <span class="platform-chip">Custom RTMP</span>
+              </div>
+            </div>
+            <div class="studio-field">
+              <label>Stream key</label>
+              <div class="studio-input">•••• •••• •••• ••••</div>
+            </div>
+            <div class="studio-row">
+              <div class="studio-toggle"><span class="toggle-on"></span> Loop 24/7</div>
+              <div class="studio-toggle muted"><span class="toggle-off"></span> Multistream</div>
+            </div>
+            <button class="btn btn-primary btn-block" type="button" tabindex="-1">Go Live</button>
+          </div>
+        </div>
+        <div class="float-card float-left">
+          <div class="float-icon cloud">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 18a4 4 0 01-.5-7.97A5 5 0 0116.4 7.5 4.5 4.5 0 0117.5 16.4"/></svg>
+          </div>
+          <div>
+            <p class="float-title">Streaming from cloud</p>
+            <p class="float-sub">Your laptop can be off</p>
+          </div>
+        </div>
+        <div class="float-card float-right">
+          <div class="float-icon live">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M16.24 7.76a6 6 0 010 8.49m-8.48-.01a6 6 0 010-8.49"/></svg>
+          </div>
+          <div>
+            <p class="float-title">Live on 3 platforms</p>
+            <p class="float-sub">One upload, many destinations</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="platform-strip">
+      <div class="container strip-inner">
+        <p class="strip-label">Stream to platforms you already use</p>
+        <div class="strip-platforms" aria-label="Supported platforms">
+          <span class="strip-item">YouTube</span>
+          <span class="strip-item">Twitch</span>
+          <span class="strip-item">Facebook</span>
+          <span class="strip-item">Kick</span>
+          <span class="strip-item">Restream</span>
+          <span class="strip-item">Custom RTMP</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="features">
+      <div class="section-head">
+        <p class="eyebrow">Features</p>
+        <h2>Everything you need to run a live channel</h2>
+        <p class="section-lead">Turn video files into real live streams without keeping hardware running or managing complex broadcast software.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 15a4 4 0 010-8 5 5 0 019.7-1 3.5 3.5 0 014.3 4A3.5 3.5 0 0117.5 17H7a3 3 0 01-3-2z"/></svg></div>
+          <h3>Cloud-based streaming</h3>
+          <p>Uploads are broadcast from the cloud. Close the tab, shut down your computer, and the live stream keeps running.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4v5h.582m14.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-13.357-2m13.357 2H15"/></svg></div>
+          <h3>24/7 seamless looping</h3>
+          <p>Loop a video continuously for music, ambient, podcast, or information channels without gaps or reconnects.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3v12M18 9v12M6 15l6 6 6-6M6 9l6-6 6 6"/></svg></div>
+          <h3>Multistream support</h3>
+          <p>Send the same stream to multiple destinations at once. Reach audiences on different platforms from one upload.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 20h8"/></svg></div>
+          <h3>No OBS required</h3>
+          <p>Skip complex broadcast software. The browser studio handles the upload, destination setup, and go-live flow.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>Your keys, your control</h3>
+          <p>Use stream keys from your own platform accounts. Manage, monitor, or stop streams from any device.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+          <h3>Fast setup</h3>
+          <p>Choose a platform, paste a stream key, upload a video, and go live in minutes. No installation or account required.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="how-it-works">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">How it works</p>
+          <h2>Live in three simple steps</h2>
+          <p class="section-lead">The workflow is designed for creators, channels, and teams who want a reliable always-on stream without a dedicated machine.</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <div class="step-num">1</div>
+            <h3>Choose your destination</h3>
+            <p>Select YouTube, Twitch, Facebook, Kick, or enter a custom RTMP server and stream key from your platform dashboard.</p>
+          </article>
+          <article class="step">
+            <div class="step-num">2</div>
+            <h3>Upload your video</h3>
+            <p>Drop in a pre-recorded MP4 or supported video file. Turn on looping if you want it to run continuously.</p>
+          </article>
+          <article class="step">
+            <div class="step-num">3</div>
+            <h3>Go live from the cloud</h3>
+            <p>CloudRelay handles the broadcast. Your stream stays live while you close the browser or turn off your device.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="use-cases">
+      <div class="section-head">
+        <p class="eyebrow">Use cases</p>
+        <h2>Built for always-on channels</h2>
+        <p class="section-lead">Common formats people run as 24/7 live streams.</p>
+      </div>
+      <div class="use-case-grid">
+        <article class="use-case">
+          <div class="use-case-tag">Music</div>
+          <h3>Lofi &amp; music radio</h3>
+          <p>Run chillhop, jazz, study beats, or curated playlists around the clock with seamless looping.</p>
+        </article>
+        <article class="use-case">
+          <div class="use-case-tag">Ambient</div>
+          <h3>Relaxing &amp; sleep streams</h3>
+          <p>Broadcast rain, fireplaces, nature soundscapes, or coffee-shop ambience as a continuous live channel.</p>
+        </article>
+        <article class="use-case">
+          <div class="use-case-tag">Shows</div>
+          <h3>Podcast &amp; radio simulcasts</h3>
+          <p>Put audio shows on video platforms with a static or animated visual and keep them live for listeners.</p>
+        </article>
+        <article class="use-case">
+          <div class="use-case-tag">Business</div>
+          <h3>Info boards &amp; promos</h3>
+          <p>Keep product loops, schedules, announcements, or digital signage live without dedicated hardware.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="get-started">
+      <div class="container cta-panel">
+        <div>
+          <p class="eyebrow">Get started</p>
+          <h2>Ready to put your video live?</h2>
+          <p class="section-lead">Create a stream in the browser studio. No software install, no always-on computer, no complicated encoder setup.</p>
+        </div>
+        <div class="cta-form" aria-label="Get started form">
+          <label class="input-label" for="email">Get notified when Studio launches</label>
+          <div class="cta-row">
+            <input class="input" id="email" type="email" placeholder="you@example.com" autocomplete="email">
+            <button class="btn btn-primary" id="notifyBtn" type="button">Notify me</button>
+          </div>
+          <p class="form-note" id="formNote">This is a demo landing page. The form does not submit to a server.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="faq">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2>Questions, answered</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Do I need to keep my computer on?</summary>
+          <p>No. Once your video is uploaded and the stream starts, the broadcast runs from the cloud. You can close your browser or shut down your device.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Which platforms can I stream to?</summary>
+          <p>You can stream to platforms that accept RTMP input, including YouTube, Twitch, Facebook, Kick, and custom RTMP destinations. Availability depends on the platform's own rules and your account status.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do I need OBS or streaming software?</summary>
+          <p>No. CloudRelay is designed for pre-recorded video streaming through a browser workflow. You upload a file, provide your stream key, and start the stream.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I loop a video for 24/7 streaming?</summary>
+          <p>Yes. Looping is intended for always-on formats like music radio, ambient channels, podcasts, and information boards.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is this a copy of Streamza?</summary>
+          <p>No. This is an original demo website inspired by the structure and product category of cloud-based pre-recorded live streaming services. It uses different branding, copy, and implementation.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="32" height="32" rx="10" fill="url(#g2)"/>
+              <path d="M10 21.5V10.5L15.5 16L10 21.5Z" fill="white"/>
+              <path d="M16.5 21.5V10.5L22 16L16.5 21.5Z" fill="white" fill-opacity="0.7"/>
+              <defs><linearGradient id="g2" x1="4" y1="4" x2="28" y2="28"><stop stop-color="#6D5EFc"/><stop offset="1" stop-color="#3BC9DB"/></linearGradient></defs>
+            </svg>
+          </span>
+          <span class="brand-name">Cloud<span>Relay</span></span>
+        </a>
+        <p>Stream pre-recorded videos live from the cloud. Built as a demo landing page inspired by modern 24/7 streaming products.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#use-cases">Use cases</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Platforms</h4>
+        <a href="#get-started">YouTube</a>
+        <a href="#get-started">Twitch</a>
+        <a href="#get-started">Facebook</a>
+        <a href="#get-started">Custom RTMP</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 CloudRelay Demo. Not affiliated with YouTube, Twitch, Facebook, Kick, or any third-party platform.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
